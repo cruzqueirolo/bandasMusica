@@ -2,9 +2,9 @@ let express = require('express');
 let router = express.Router();
 let bandaController = require('../controllers/bandaController')
 
-router.get("/",bandaController.index);
-router.get("/detalle/:id",bandaController.show);
-//router.get("/bio/:id/",heroeController.bio);
+router.get("/",bandaController.listaBandas);
+router.get("/detalle/:id",bandaController.id);
+router.get("/genero/:genero", bandaController.genero);
 
 
 module.exports = router

@@ -1,0 +1,11 @@
+<%- include("./partials/head") %>
+
+<body>
+    <h1>Bandas</h1>
+    <ul>
+        <% for( let i = 0; i < index.length; i++ ) { %>
+            <li>Nombre: <%= index[i].nombre %></li>
+        
+        <% } %>
+    </ul>
+</body>

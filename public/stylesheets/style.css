@@ -8,5 +8,34 @@ a {
 }
 
 h1{
+  width: 50%;
   color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.bandas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.nombresBandas{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.imagenesBandas{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }

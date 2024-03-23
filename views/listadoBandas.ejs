@@ -1,0 +1,14 @@
+<%- include("./partials/head") %>
+
+<body>
+    <section>
+        <h1>Listado Bandas</h1>
+        <ul class="bandas">
+            <% for( let i = 0; i < index.length; i++ ) { %>
+                <li class="nombresBandas"><%= index[i].nombre %></li>
+                <img class="imagenesBandas" src="<%= index[i].cover %>" alt="<%=index[i].nombre  %>">
+            <% } %>
+        </ul>
+    </section>
+    <%- include("./partials/footer") %>
+</body>
