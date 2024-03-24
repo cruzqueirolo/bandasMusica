@@ -16,22 +16,22 @@ const bandaController = {
                 index:detalleBanda
             })
         }
-        else{
+        else if(id>db.lista.length){
             return res.render("idNoValido",{
                 mensaje:"No encontramos a la banda indicada. Por favor, elija otro id"})
         }
     }},
     genero: function (req, res) {
-        let bandas_con_genero = [];
         let genero = req.params.genero;
+        let bandasPorGenero = [];
         for (let i = 0; i < db.lista.length; i++) {
-            let generoEnLista = db.lista[i].genero;
-            if (genero.toLowerCase() === generoEnLista.toLowerCase()) {
-                bandas_con_genero.push(db.lista[i].nombre);
+            if (db.lista[i].genero === genero) {
+                bandasPorGenero.push(db.lista[i]);
             }
         }
-        return res.send("Las bandas con este género son " + bandas_con_genero);
-    } 
+        return res.render('listadoGeneros', { index: bandasPorGenero, genero: genero });
+    }
+    
 }
 
 module.exports = bandaController

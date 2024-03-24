@@ -1,0 +1,16 @@
+<%- include("./partials/head") %>
+
+<body>
+    <section>
+        <h1>Bandas por Género: <%= genero %></h1>
+        <ul class="bandas">
+            <% for(let i = 0; i < index.length; i++) { %>
+                <li class="detalleBandas">
+                    <a href="/bandas/detalle/<%= index[i].id %>"><%= index[i].nombre %></a>
+                    <img class="imagenesBandas" src="<%= index[i].cover %>" alt="<%= index[i].nombre %>" style="width: 200px;">
+                </li>
+            <% } %>
+        </ul>
+    </section>
+    <%- include("./partials/footer") %>
+</body>
