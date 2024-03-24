@@ -7,15 +7,20 @@ const bandaController = {
         })
     },
     id: function (req, res) {
-        let id = req.params.id 
-        let datos = db.lista[id]
-        if (id < db.lista.length) { 
-            return res.send("La banda con este id es " + datos.nombre)
+        let id = req.params.id
+        let detalleBanda = [] 
+        for (let i = 0; i < db.lista.length; i++) {
+            if (id == db.lista[i].id) {
+                detalleBanda.push(db.lista[i]) 
+            return res.render("detallesBanda",{
+                index:detalleBanda
+            })
         }
         else{
-            return res.send("No encontramos a la banda indicada. Por favor, elija otro id");
+            return res.render("idNoValido",{
+                mensaje:"No encontramos a la banda indicada. Por favor, elija otro id"})
         }
-    },
+    }},
     genero: function (req, res) {
         let bandas_con_genero = [];
         let genero = req.params.genero;
