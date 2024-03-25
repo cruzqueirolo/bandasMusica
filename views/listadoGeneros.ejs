@@ -6,8 +6,8 @@
         <ul class="bandas">
             <% for(let i = 0; i < index.length; i++) { %>
                 <li class="detalleBandas">
-                    <a href="/bandas/detalle/<%= index[i].id %>"><%= index[i].nombre %></a>
-                    <img class="imagenesBandas" src="<%= index[i].cover %>" alt="<%= index[i].nombre %>" style="width: 200px;">
+                    <a class="nombreBanda" href="/bandas/detalle/<%= index[i].id %>"><%= index[i].nombre %></a>
+                    <img class="imagenesBandas" src="/<%= index[i].cover %>" alt="<%= index[i].nombre %>" style="width: 400px;">
                 </li>
             <% } %>
         </ul>

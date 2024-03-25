@@ -2,15 +2,16 @@
 
 <body>
     <h1>Bandas</h1>
-    <ul>
+    <ul class="bandas">
         <% for( let i = 0; i < index.length; i++ ) { %>
             <li class="detalleBandas">Nombre: <%= index[i].nombre %></li>
             <li class="detalleBandas">Integrantes: <%= index[i].integrantes %></li>
             <li class="detalleBandas"><a href="/bandas/Genero/<%= index[i].genero %>">Genero:<%= index[i].genero %></a></li>
             <li class="detalleBandas">Canciones Top: <%= index[i].topCanciones %></li>
             <li class="detalleBandas">Cover:</li>
-            <li><img class="imagenesBandas" src="/<%= index[i].cover %>" alt="<%= index[i].nombre %>" style="width: 600px; display: block; margin: 0 auto;"></li>
-            <li>Video: <iframe width="560" height="315" src="<%= index[i].video %>" frameborder="0" allowfullscreen></iframe></li>
+            <li><img class="imagenesBandas" src="/<%= index[i].cover %>" alt="<%= index[i].nombre %>" style="width: 400px; margin: 0 auto;"></li>
+            <li class="detalleBandas">Video:</li>
+            <li><iframe class="imagenesBandas" width="560" height="315" src="<%= index[i].video %>" frameborder="0" allowfullscreen></iframe></li>
         <% } %>
     </ul>
 </body>
